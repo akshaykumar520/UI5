@@ -1,0 +1,106 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:f="sap.ui.layout.form" xmlns:l="sap.ui.layout">
+	<IconTabBar>
+		<items>
+			<IconTabFilter icon="sap-icon://activity-items" id="salesorderfilter">
+				<Table items="{ToSalesOrderLineItems/}">
+					<columns>
+						<Column>
+							<Text text="ID"></Text>
+						</Column>
+						<Column>
+							<Text text="ItemPosition"></Text>
+						</Column>
+						<Column>
+							<Text text="GrossAmount"></Text>
+						</Column>
+						<Column>
+							<Text text="NetAmount"></Text>
+						</Column>
+						<Column>
+							<Text text="Currency"></Text>
+						</Column>
+						<Column>
+							<Text text="Gross Amount"></Text>
+						</Column>
+						<Column>
+							<Text text="Net Amount"></Text>
+						</Column>
+						<Column>
+							<Text text="Tax Amount"></Text>
+						</Column>
+						<Column>
+							<Text text="DeliveryDate"></Text>
+						</Column>
+						<Column>
+							<Text text="Quantity"></Text>
+						</Column>
+						<Column>
+							<Text text="Unit"></Text>
+						</Column>
+					</columns>
+					<items>
+						<ColumnListItem press="onPress">
+							<cells>
+								<Text text="{SalesOrderID}"></Text>
+								<Text text="{ItemPosition}"></Text>
+								<Text text="{GrossAmount}"></Text>
+								<Text text="{NetAmount}"></Text>
+								<Text text="{CurrencyCode}"></Text>
+								<Text text="{GrossAmount}"></Text>
+								<Text text="{NetAmount}"></Text>
+								<Text text="{TaxAmount}"></Text>
+								<Text text="{DeliveryDate}"></Text>
+								<Text text="{Quantity}"></Text>
+								<Text text="{QuantityUnit}"></Text>
+							</cells>
+						</ColumnListItem>
+					</items>
+				</Table>
+			</IconTabFilter>
+			<IconTabSeparator/>
+			<IconTabFilter icon="sap-icon://message-information" id="suppliersfilter">
+				<f:SimpleForm id="suppliersform" title="Supplier Details" layout="ResponsiveGridLayout">
+					<f:content>
+						<core:Title text="Business Partner"/>
+						<Label text="BusinessPartner ID"></Label>
+						<Text text="{ToSupplier/BusinessPartnerID}"></Text>
+						<Label text="Company Name"></Label>
+						<Text text="{ToSupplier/CompanyName}"></Text>
+						<Label text="Web Address"></Label>
+						<Text text="{ToSupplier/WebAddress}"></Text>
+						<Label text="Email Address"></Label>
+						<Text text="{ToSupplier/EmailAddress}"></Text>
+						<Label text="Phone Number)"></Label>
+						<Text text="{ToSupplier/PhoneNumber}"></Text>
+						<Label text="Fax Number"></Label>
+						<Text text="{ToSupplier/FaxNumber}"></Text>
+						<Label text="Legal Form"></Label>
+						<Text text="{ToSupplier/LegalForm}"></Text>
+						<Label text="Currency Code"></Label>
+						<Text text="{ToSupplier/CurrencyCode}"></Text>
+						<Label text="Business Partner Role"></Label>
+						<Text text="{ToSupplier/BusinessPartnerRole}"></Text>
+						<Label text="Created At"></Label>
+						<Text text="{ToSupplier/CreatedAt}"></Text>
+						<Label text="Changed At"></Label>
+						<Text text="{ToSupplier/ChangedAt}"></Text>
+						<core:Title text="Address"/>
+						<Label text="City"></Label>
+						<Text text="{ToSupplier/Address/City}"></Text>
+						<Label text="Postal Code"></Label>
+						<Text text="{ToSupplier/Address/PostalCode}"></Text>
+						<Label text="Street"></Label>
+						<Text text="{ToSupplier/Address/Street}"></Text>
+						<Label text="Building"></Label>
+						<Text text="{ToSupplier/Address/Building}"></Text>
+						<Label text="Country"></Label>
+						<Text text="{ToSupplier/Address/Country}"></Text>
+						<Label text="AddressType"></Label>
+						<Text text="{ToSupplier/Address/AddressType}"></Text>
+					</f:content>
+				</f:SimpleForm>
+			</IconTabFilter>
+			<IconTabSeparator/>
+		</items>
+	</IconTabBar>
+</core:FragmentDefinition>

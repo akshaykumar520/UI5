@@ -1,0 +1,32 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m">
+	<Table items="{/ProductSet}" id="table">
+		<columns>
+			<Column>
+				<Text text="ID"></Text>
+			</Column>
+			<Column>
+				<Text text="Category"></Text>
+			</Column>
+			<Column>
+				<Text text="Name"></Text>
+			</Column>
+			<Column>
+				<Text text="Price"></Text>
+			</Column>
+			<Column>
+				<Text text="Currency"></Text>
+			</Column>
+		</columns>
+		<items>
+			<ColumnListItem type="Navigation" press="onPress">
+				<cells>
+					<Text text="{ProductID}"></Text>
+					<Text text="{Category}"></Text>
+					<Text text="{Name}"></Text>
+					<Text text="{Price}"></Text>
+					<Text text="{CurrencyCode}"></Text>
+				</cells>
+			</ColumnListItem>
+		</items>
+	</Table>
+</core:FragmentDefinition>
